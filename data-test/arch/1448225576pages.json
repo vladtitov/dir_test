@@ -1,0 +1,1 @@
+[{"name":"Amenities ","seq":1,"id":2,"icon":"fa fa-book","url":"pages/page2.htm","enabled":true},{"name":"Leasing Info","seq":2,"id":1,"icon":"fa fa-lock","url":"pages/page1.htm","enabled":true},{"id":4,"icon":"fa fa-copyright","name":"One more Page","seq":"2","enabled":true,"url":"pages/page4.htm"}]

@@ -1,0 +1,1 @@
+[{"maxdelay":20,"typeid":1,"type":"kiosk","id":4,"name":"Lobby Kiosk 4","template":"Kiosk1080.php?id=kiosk4"},{"type":"kiosk","id":6,"typeid":2,"id":"6","name":"Kiosk hallway 6","template":"Kiosk1920.php?id=kiosk6"},{"id":"7","typeid":1,"type":"mobile","name":"Mobile","template":"KioskMobile.php?settings=settings"}]

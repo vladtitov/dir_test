@@ -1,0 +1,1 @@
+[{"S_time":0,"K_time":0,"ip":"","ping":0,"start_at":0,"timer":15000,"maxdelay":20,"typeid":1,"type":"kiosk","id":4,"name":"Lobby Kiosk id 4","template":"Kiosk1080.php?id=kiosk4"},{"S_time":0,"K_time":0,"ip":"","ping":0,"start_at":0,"timer":15000,"type":"kiosk","id":"6","typeid":2,"name":"Kiosk hallway 6","template":"Kiosk1920.php?id=kiosk6"}]
