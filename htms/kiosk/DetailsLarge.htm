@@ -1,0 +1,109 @@
+<section id="DetailsLarge" class="modal hide" data-id="btnClose" data-ctr="uplight.DetailsLarge">
+    <style>
+        #DetailsLarge{
+
+        }
+        #DetailsLarge .nano {
+            overflow-x: auto;
+            overflow-y: hidden;
+            height: 100px;
+        }
+        #DetailsLarge .hlist {
+            white-space: nowrap;
+            height: 100px;
+        }
+        #DetailsLarge .hlist>a {
+            vertical-align: top;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 0 5px 0 5px;
+        }
+        #DetailsLarge .hlist>a>img {
+            max-height: 100px;
+            max-width: 100px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        #DetailsLarge .shell{
+            width: 658px;
+            height: 466px;
+            position: relative;
+        }
+        #DetailsLarge .shell>img{
+            max-width: 658px;
+            max-height: 466px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+    </style>
+
+    <div class="modal-dialog">
+        <div class="modal-content details-bg central">
+
+            <div class="modal-header">
+                <div class="btn fa fa-close pull-right" data-id="btnClose"></div>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <h4>Name</h4>
+                        <h2 data-id="name">
+                            Remove a portion
+                        </h2>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>unit</h4>
+                        <h2 data-id="unit"></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body content">
+                <div class="row details">
+                    <div class="col-sm-8 more" data-id="more">
+
+                    </div>
+                    <div class="col-sm-4 tmb" data-id="tumb">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="shell">
+                            <img data-id="image" />
+                        </div>
+
+                    </div>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-sm-12" >
+                        <div class="nano">
+                            <div  class="nano-content">
+                                <div data-id="gallery" class="hlist">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default pull-right" data-id="btnClose">Close</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+

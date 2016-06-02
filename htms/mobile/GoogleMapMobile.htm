@@ -1,0 +1,79 @@
+<div id="GoogleMapMobile">
+    <style>
+
+        #GoogleMap{
+            height: 80vh;
+
+        }
+    </style>
+
+    <div class="row">
+        <style>
+            #TextDirectionsPanel{
+                padding: 12px;
+                position: fixed;
+                top: 50px;
+                left:100%;
+                width:200px;
+
+                background-color: white;
+                transition: transform 0.5s;
+            }
+            #TextDirectionsPanel.open{
+                transform: translateX(-200px);
+            }
+            #TextDirections{
+                max-height: 40vh;
+                overflow: auto;
+                margin-left: 0;
+            }
+
+
+
+            #TextDirectionsPanel .radioform{
+                margin-left: 40px;;
+            }
+            #TextDirectionsPanel h5{
+                font-size: x-small;
+            }
+        </style>
+
+        <div>
+            <h4> <a class="btn" data-id="btnGetDirections" >Get Directions</a><small> Google Map</small> </h4>
+
+            <div class="col-sm-12" >
+                    <section id="GoogleMap">
+
+                    </section>
+
+            </div>
+        </div>
+
+
+        <div id="TextDirectionsPanel" data-id="directions">
+            <a  class="btn fa fa-close pull-right" data-id="btnClose"></a>
+            <h5><strong>1.</strong> Choose travel type</h5>
+            <form data-id="travalType" class="radioform">
+                <label class="radio">
+                    <input type="radio" name="travelType" id="DRIVING" value="DRIVING1" checked> Driving
+                </label>
+                <label class="radio">
+                    <input type="radio" name="travelType" id="WALKING" value="WALKING"> Walking
+                </label>
+                <label class="radio">
+                    <input type="radio" name="travelType" id="TRANSIT" value="TRANSIT"> Transit
+                </label>
+            </form>
+            <h5><strong>2. </strong> Zoom out to see your location</h5>
+            <h5><strong>3. </strong> With this panel open click on map to pick start point</h5>
+            <hr/>
+
+            <div id="TextDirections" data-id="txtDirextions">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,129 @@
+<section class="container">
+<style type="text/css">
+
+/*#SettingsEdit tr>td:first-child{
+        width: 20%;
+}*/
+#SettingsEdit tr>td:last-child{
+    width: 10%;
+}
+#SettingsEdit tr>td{
+    display: table-cell;
+    vertical-align: middle;
+}
+#SettingsEdit table{
+    display: table;
+}
+#SettingsEdit .value>img{
+    max-height: 5em;
+    max-width: 5em;
+}
+#SettingsEdit .nano{
+    max-height: 60em;
+    overflow-y: auto;
+}
+#SettingsEdit .editor{
+    width: 50em;
+    height: 20em;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#SettingsEdit .editor.large{
+    height: 50em;
+}
+#SettingsEdit .footer{
+    width: 100%;
+    position: absolute;
+    bottom: 2em;
+    background-color: white;
+    text-align: center;
+}
+
+#SettingsEditorr .panel-body>*{
+    text-align: center;
+}
+#SettingsEditor input{
+    display: inline-block;
+}
+
+</style>
+    <div class="page-heading">
+        <h4>Settings Editor</h4>
+        <div class="pagenav" data-ctr="BreadCrumbs">
+
+        </div>
+    </div>
+<div id="SettingsEdit" class="row">
+    <section class="panel panel-default">
+
+        <section class="panel-body">
+            <div data-id="list" role="form" class="nano">
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <section data-ctr="ValueEditor" class="modal" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span data-id="btnClose" class="fa fa-close pull-right btn"></span>
+                    <h3 class="modal-title">Label Editor</h3>
+                </div>
+                <section class="modal-body">
+                    <div class="form">
+                        <div class="form-group">
+                            <label data-id="lblInfo"></label>
+                            <input  data-id="tiValue" type="text"  class="form-control" />
+                        </div>
+
+                    </div>
+                </section>
+                    <div class="modal-footer">
+                       <!-- <input data-id="btnUpload" type="file" name="file" class="btn btn-warning" value="Upload New"/>-->
+                        <button type="button" data-id="btnSave" class="btn btn-primary">Save</button>
+                        <button type="button" data-id="btnClose" class="btn btn-default">Close</button>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section  data-ctr="TimeEditor" class="modal" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span data-id="btnClose" class="fa fa-close pull-right btn"></span>
+                    <h3 class="modal-title">Label Editor</h3>
+                </div>
+                <section class="modal-body">
+                    <div class="form">
+                        <div class="form-group">
+                            <label data-id="lblInfo"></label>
+                            <select data-id="selTime" class="form-control">
+
+                            </select>
+                        </div>
+
+                    </div>
+                </section>
+                <div class="modal-footer">
+                    <!-- <input data-id="btnUpload" type="file" name="file" class="btn btn-warning" value="Upload New"/>-->
+                    <button type="button" data-id="btnSave" class="btn btn-primary">Save</button>
+                    <button type="button" data-id="btnClose" class="btn btn-default">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+</section>

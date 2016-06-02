@@ -1,0 +1,299 @@
+<div id="AttractLoopEdit" class="container">
+<style>
+    .viewport iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transform:scale(0.5);
+        -moz-transform-origin: top left;
+        -webkit-transform-origin: top left;
+        -moz-transform-scale(0.5);
+        margin: 5px;
+    }
+#AttractLoopEdit .viewport{
+    position: relative;
+    width: 550px;
+    height: 970px;
+    overflow: hidden;
+    border: thin gray solid;
+    border-radius:5px;
+    margin: 10px;
+  /*  box-shadow: 0 0 5px #333333;*/
+
+}
+    #AttractLoopView{
+        top:85px;
+    }
+    #AttractLoopEdit .preview{
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+     display: none;
+    }
+    #AttractLoopEdit-Library{
+       /* display: none;*/
+    }
+
+    #AttractLoopEdit .relative{
+        position: relative;
+    }
+    #AttractLoopEdit .absolute{
+        position: absolute;
+        top: 2em;
+    }
+    #AttractLoopEdit .nano{
+        width: 100%;
+        overflow-x: auto;
+        overflow-y:hidden;
+    }
+    #AttractLoopEdit ul{
+        white-space: nowrap;
+    }
+    #AttractLoopEdit ul>li{
+         display: inline-block;
+        width: 150px;
+        height: 150px;
+        padding: 5px;
+        margin: 5px;
+        border: thin white solid;
+     }
+
+    #AttractLoopEdit ul>li>*{
+        max-width: 140px;
+        max-height: 140px;
+        margin: auto;
+     }
+
+    #AttractLoopEdit ul>li.selected{
+        border: thin yellowgreen solid;
+     }
+    #AttractLoopEdit .shell{
+       /* position: absolute;*/
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border: solid lightcyan thin;
+    }
+    #AttractLoopEdit .prop{
+        min-height: 3em;
+    }
+    #AttractLoopEdit .inline{
+        display: inline-block;
+    }
+    #AttractLoopEdit .inline>.form-control{
+        display: inline;
+    }
+
+</style>
+
+    <div class="page-heading">
+        <h4>Attract loop Editor</h4>
+        <div class="pagenav" data-ctr="BreadCrumbs">
+
+        </div>
+    </div>
+
+    <div class="row"  data-id="current">
+            <div class="panel panel-default">
+                    <div class="panel-heading" data-id="tools">
+
+                       <!-- <a class="btn" data-id="btnPreview"><span class="fa fa-eye"></span> Preview</a>-->
+                        <a class="btn" data-id="btnChangeType"><span class="fa fa-edit"></span> Change type</a>
+                       <!-- <div  data-id="selectType" class="hidden inline">
+                            <div class="inline">
+                            <select class="form-control" data-id="select">
+                            </select>
+                            </div>
+                          &nbsp;&nbsp; <button type="button" class="close inline" data-id="btnClose">&times;</button>
+                        </div>-->
+                    </div>
+                <div class="panel-body">
+                        <h4 data-id="title" class="text-center">Current Attract loop</h4>
+                        <div data-id="alView">
+
+
+                        </div>
+                    <div><input type="checkbox" checked="true" data-id="chkTC" /> Include touch clip &nbsp;<button class="btn btn-primary hidden" data-id="btnSave">Save</button> </div>
+
+
+                </div>
+            </div>
+    </div>
+    <div id="ALEditor" class="row" style="display: none">
+
+    </div>
+
+
+
+    <div id="ChangeType" class="row"  data-id="selectType" style="display: none" >
+        <div class="panel panel-default">
+            <div class="modal-header">
+                <button type="button" class="close" data-id="btnClose"><span class="fa fa-close"></span></button>
+                <div  role="form" >
+                    <div class="form-group">
+                        <label>Select type of Attract loop you want to use</label>
+                        <select class="form-control"  data-id="selTemplate" ></select>
+                    </div>
+                </div>
+            </div>
+
+
+            <div  class="modal-body" >
+                <div  data-id="editorView"></div>
+
+                <div><input type="checkbox" checked="true" data-id="chkTC"/> Include touch clip</div>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-id="btnSave">Set new Attract loop type</button>
+
+                <button type="button" class="btn btn-default" data-id="btnClose">Close</button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div id="Template" class="hidden">
+    <div class="panel panel-default" data-ctr="GalleryPreview">
+        <div class="panel-body">
+            <a class="btn pull-right" data-id="btnEdit"><span class="fa fa-edit"></span> Edit</a>
+            <h3 data-id="name"></h3>
+
+            <table class="table">
+                <tbody data-id="prop-list">
+                <tr><td><b>Image size in pixels:</b></td><td data-id="size"></td></tr>
+                <tr><td><b>Delay in seconds:</b> </td><td data-id="delay"></td></tr>
+                </tbody>
+            </table>
+
+            <a class="btn" data-id="btnShowImages"><span class="fa fa-eye"></span> <span>Show Images</span></a>
+            <div class="nano"></div>
+        </div>
+    </div>
+
+    <div data-ctr="GalleryEditor">
+        <style>
+            #AttractLoopEdit .list img.atten{
+                border: thin solid pink;
+            }
+        </style>
+
+        <div data-id="editor" class="panel panel-default">
+
+            <div class="tools panel-heading">
+                <a class="btn" data-id="btnAdd"><div data-id="viewUploadAdd" class="hidden relative"><div class="absolute"><input type="file" name="file" data-id="btnUploadAdd" /></div></div><span class="fa fa-plus"></span> Add </a>
+                <a class="btn" data-id="btnEdit"><div data-id="viewUploadEdit" class="hidden relative"><div class="absolute"><input type="file" name="file" data-id="btnUploadEdit" /></div></div><span class="fa fa-edit"></span> Replace </a>
+                <a class="btn" data-id="btnDelete"><span class="fa fa-minus"></span> Remove </a>
+             <!--   <a class="btn" data-id="btnPreview"><span class="fa fa-eye"></span> Preview</a>
+                <a class="btn" data-id="btnSave"><span class="fa fa-save"></span> Save </a>-->
+                <a class="btn pull-right" data-id="btnClose"><span class="fa fa-close"></span></a>
+            </div>
+
+            <div class="items-body panel-body">
+                <div class="prop" data-id="props">
+                    <h3 data-id="title"></h3>
+
+                    <table class="table">
+                        <tbody data-id="prop-list">
+                        <tr><td><b>Image size in pixels:</b></td><td data-id="size"></td></tr>
+                        <tr><td><b>Delay in seconds:</b> </td><td><input data-id="delay"type="text" class="form-control"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="nano">
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-id="btnSave">Save changes</button>
+                <button type="button" class="btn btn-default" data-id="btnClose">Close</button>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+        <div id="AttractLoopEdit-Library" class="row hidden" data-id="library">
+
+            <div data-id="Simple">
+                <h4 data-id="name"></h4>
+            </div>
+
+
+
+            <div data-id="ImageBottom">
+                <h4>Gallery in the bottom of screen</h4>
+                <div data-id="editor">
+
+                </div>
+                <div data-id="current">
+
+                </div>
+
+            </div>
+
+            <div data-id="RSSFeed">
+                <h4>RSS Attarct loop</h4>
+                <div data-id="editor">
+
+                </div>
+                <div data-id="current">
+
+                </div>
+
+            </div>
+            <div data-id="Messages">
+                <h4>Messages</h4>
+                <div data-id="editor">
+
+                </div>
+                <div data-id="current">
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="preview" data-id="kioskPreview" >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-id="btnClose"><span class="fa fa-close"></span></button>
+                        <h4 class="modal-title" data-id="editHeader">Kiosk Preview</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="viewport">
+                            <iframe id="KioskView" width="1080" height="1920" src="" scrolling="no" frameborder="0" >
+
+                            </iframe>
+                            <iframe id="AttractLoopView" width="1080" height="1750" src="" scrolling="no" frameborder="0" >
+
+                            </iframe>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" data-id="btnClose">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>

@@ -1,0 +1,121 @@
+<section class="container">
+
+
+<style type="text/css">
+
+
+#LabelsManager .value>img{
+    max-height: 5em;
+    max-width: 5em;
+}
+#LabelsManager .nano{
+    max-height: 60em;
+    overflow-y: auto;
+}
+#LabelsManager .editor{
+    width: 50em;
+    height: 20em;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#LabelsManager .editor.large{
+    height: 50em;
+}
+#LabelsManager .footer{
+    width: 100%;
+    position: absolute;
+    bottom: 2em;
+    background-color: white;
+    text-align: center;
+}
+    #LabelEditor img{
+        max-height: 30em;
+        max-width: 40em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+
+    }
+#LabelEditorr .panel-body>*{
+    text-align: center;
+}
+#LabelEditor input{
+    display: inline-block;
+}
+</style>
+    <div class="page-heading">
+        <h4>Assets and Labels Manager</h4>
+        <div class="pagenav" data-ctr="BreadCrumbs">
+
+        </div>
+    </div>
+<div id="LabelsManager" class="row">
+    <section class="panel panel-default">
+       <!-- <section class="panel-heading">
+            <span class="panel-title"> </span>
+                <a class="btn" data-id="btnAdd" data-role="isSuper" ><span class="fa fa-plus"></span> Add</a>
+                &lt;!&ndash; <a class="btn" data-id="btnEdit" ><span class="fa fa-edit"></span>Edit</a>&ndash;&gt;
+
+
+        </section>-->
+        <section class="panel-body">
+            <div data-id="list" role="form" class="nano">
+
+            </div>
+
+        </section>
+    </section>
+
+
+    <section id="LabelEditor" data-id="labelEditor" class="modal" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="fa fa-close pull-right btn" data-id="btnClose"></span>
+                    <h3 class="modal-title">Label Editor</h3>
+                </div>
+                <section class="modal-body">
+                    <div class="form">
+
+                        <div class="form-group" data-role="isSuper">
+                            <label data-id="type">Type</label>
+                            <select  data-id="select"  class="form-control" >
+                                <option value="text">Text</option>
+                                <option value="img">Image</option>
+                            </select>
+                        </div>
+                        <div class="form-group" data-role="isSuper">
+                            <label>Index value</label>
+                            <input  data-id="tiIndex" type="text"  class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input  data-id="tiDescr" type="text"  class="form-control" />
+                        </div>
+                        <div class="form-group" data-id="text" style="display: none">
+                            <label>Value</label>
+                            <input  data-id="tiValue" type="text"  class="form-control" />
+                        </div>
+                        <div class="form-group" data-id="img" style="display: none">
+                            <input data-id="btnUpload" type="file" name="file" class="btn btn-warning" value="Upload New"/>
+                            <img data-id="imgValue"  />
+                        </div>
+                    </div>
+                </section>
+                <div class="modal-footer">
+                        <button type="button" data-id="btnDelete" data-role="isSuper" class="btn btn-warning">Delete</button>
+                        <button type="button" data-id="btnSave" class="btn btn-primary">Save</button>
+                        <button type="button" data-id="btnClose" class="btn btn-default">Close</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</section>

@@ -1,0 +1,38 @@
+<div id="RestoreUsername">
+    <style>
+        .off{
+            display: none;
+        }
+        .message{
+            position: absolute;
+            bottom: 20px;
+            padding: 5px;
+            background-color: #faebcc;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px gray;
+        }
+    </style>
+    <h5>Username restore</h5>
+                <div style="position: relative">
+                    <div class="off message" data-id="message">
+                    </div>
+                </div>
+
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" required>
+                    </div>
+                   <button type="submit" class="btn btn-primary pull-right">Email me my username</button>
+                </form>
+
+       <script type="text/javascript">
+		      require(['js/Utils'],function(){
+                  require(['js/Forms'],function(){
+                         require(['js/RestorePassowrd'],function(){
+                           var login = new uplight.RestorePassowrd($('#RestoreUsername'),'Restore,restore.email_username','RestoreUsername');
+                            });
+                  });
+		        })
+    </script>
+</div>

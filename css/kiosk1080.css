@@ -1,0 +1,143 @@
+﻿body{
+    width: 1080px;
+    height: 1840px;
+   overflow: hidden;
+}
+
+#container{
+    width: 1080px;
+    height: 1840px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+#mainview{
+    position: absolute;
+    top: 400px;
+    width: 100%;
+}
+
+
+#list-scroll{
+    width:99%;
+    height: 880px;
+    overflow-y: scroll;
+}
+
+#list-scroll li{
+    border-radius: 20px;
+    margin: 12px 5px 12px 5px;
+    padding: 12px;
+    min-height: 95px;
+}
+
+#list-scroll ul>li.selected{
+    box-shadow: 0 0 5px yellow;
+}
+.fa-briefcase{
+    color:#D96D00;
+}
+.fa-user{
+    color: green;
+}
+#list-scroll li .icon{
+    width: 25px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 0.5em;
+}
+
+#list-scroll li .name{
+font-size: 25px;
+   /* padding-left: 12px;*/
+}
+
+#list-scroll li .kws{
+    height: 1em;
+    width: 100px;
+    margin-left: 100px;
+    display: inline-block;
+
+}
+
+/*START Details  */
+.details>.tmb{
+display: inline-block;
+    float: right;
+
+}
+.details>.tmb>img{
+    width: 128px;
+   /* height: 128px;*/
+    vertical-align: top;
+}
+
+.details>.more{
+    min-height: 128px;
+    margin-top: 10px;
+}
+.details>.more>table{
+    border-spacing: 10px;
+}
+.details>.more>table> tbody>tr> td:first-child{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.details>.more{
+    display: inline-block;
+   /* min-height: 128px;*/
+    min-width: 2px;
+    display: inline-block;
+
+}
+
+#DetailsLarge>.modal-dialog{
+    width: 730px;
+    top:380px;
+    margin-top: 0;
+
+}
+
+#DetailsLarge .modal-content{
+    height: 1100px;
+}
+
+.u-glow{
+    box-shadow: 0px 0px 15px #666666;
+}
+
+#cover>.detailsL{
+    top: 230px;
+}
+
+#sideview{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 365px;
+}
+#sideview>hr:first-child{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    margin: 0;
+}
+#sideview>hr:last-child{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+}
+
+#mainport, #cover>.detailsL {
+    position: absolute;
+    width:725px;
+    height: 1030px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+}

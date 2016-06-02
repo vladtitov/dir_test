@@ -1,0 +1,118 @@
+<div id="Statistics" class="container">
+<style>
+#Statistics li{
+
+    list-style: none;
+}
+
+ #Statistics .nano{
+     overflow-y: auto;
+     overflow-x: hidden;
+     height: 270px;
+ }
+
+</style>
+    <div class="page-heading">
+        <h4>Statistics</h4>
+        <div class="pagenav" data-ctr="BreadCrumbs">
+
+        </div>
+    </div>
+    <div class="row" id="DevicesData">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Devices</h3>
+                <hr/>
+                <table class="table">
+                    <thead><tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                        <th>Status</th>
+                        <th>IP</th>
+                        <th>Ping</th>
+                        <th class="text-center">Started At</th>
+                        <th class="text-center">Last ping at</th>
+                    </tr>
+                    </thead>
+                    <tbody data-id="list">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="row" id="KiosksChart">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Usage &nbsp;<small data-id="fromto"></small></h3>
+
+                <hr/>
+                <div data-id="list">
+
+                </div>
+
+                <canvas class="t" width="800" height="200" data-id="canvas">
+
+                </canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="row" id="CategoriesChart">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Categories popularity</h3>
+                <hr/>
+                <div data-id="chart" class="col-md-6">
+                        <canvas class="pull-right" width="200" height="200" data-id="canvas">
+
+                        </canvas>
+                </div>
+                <div data-id="list" class="col-md-6">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" id="TopSearches">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>20 most popular searches</h3>
+                <div class="col-sm-5 nano" data-id="list1">
+
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5 nano" data-id="list2">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" id="TopDestinations">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>20 most popular destinations</h3>
+                <hr/>
+                <div class="nano" data-id="list">
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <style>
+        #KiosksChart ul>li{
+            margin: 1em;
+            display: inline;
+
+        }
+
+    </style>
+
+
+</div>

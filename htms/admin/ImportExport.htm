@@ -1,0 +1,86 @@
+<section class="container">
+
+ <style type="text/css">
+
+     input[type="file"] {
+        display: inline;
+        width: 15em;
+    }
+
+     #table-container{
+         height:50em;
+         overflow-y:scroll;
+     }
+
+    div.group{
+        display: inline-block;
+        border: inset 1px gray;
+        border-radius: 5px;
+        padding: 0.5em;
+    }
+
+    tr.selected {
+    background-color: #FFC;
+    }
+</style>
+
+<section id="ImportExport" class="row">
+    <div class="page-heading">
+        <h4>Import / Export</h4>
+        <div class="pagenav" data-ctr="BreadCrumbs">
+
+        </div>
+    </div>
+    <div data-id="tabelView" class="panel panel-default">
+            <section class="panel-heading">
+            <!--  <a  data-id="btnImport" href="javascript:void(0)" class="uplight" title="Import Data from File" > <img  src="css/icons/import.png" />Import</a>-->
+                <div class="group">
+                    <span>Import</span>
+                    <a class="btn group" >
+                        <form data-id="formImport" enctype="multipart/form-data"  >
+                            <input data-id="btnImport" name="file" type="file" title="Choose file on local filesystem" />
+                        </form>
+                    </a>
+
+
+                    <a  data-id="btnDel" title="Remove selected records from table" class="btn" ><span class="fa fa-minus"></span> Remove selected</a>
+
+                    <input data-id="btnUpload" type="button" class="btn btn-primary" value="Upload"/>
+
+                    <a class="btn" title="Add imported records to existing data" >
+                        <input data-id="rdAdd" type="radio" name="addover" checked="true"/> Add
+
+                    </a>
+                    <a class="btn" title="Replace existing data with new imported records">
+                        <input data-id="rdOver" type="radio" name="addover"  /> Overwrite
+                    </a>
+
+
+
+
+                </div>
+                        &nbsp;&nbsp;&nbsp;
+                <div class="group">
+                    <span>Export</span>
+                    <!--<a class="btn">
+                        <input data-id="rdCSV" type="radio" name="exporttype" checked="true" title="Download file with data as CSV" /> Add
+                    </a>
+                    <a class="btn">
+                        <input data-id="rdTAB" type="radio" name="exporttype" title="Download file with data TAB delimited as text" /> Overwrite
+                    </a>-->
+                    <a data-id="btnDownload"  class="btn btn-primary">Download</a>
+                </div>
+            </section><!-- end tools -->
+
+        <section id="ImportExport-table" class="panel-body">
+            <h5>Destinations List <span class="right">Total:<span data-id="total"></span></span></h5>
+            <div id="table-container">
+
+                <!--Table data goes here      -->
+
+            </div>
+        </section>
+    </div>
+
+</section>
+</section>

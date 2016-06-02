@@ -1,0 +1,128 @@
+<section data-ctr="TableEditor" class="container">
+    <style>
+        tbody .selected{
+            background-color: khaki;
+        }
+    </style>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="buttons">
+                    <a  data-id="btnAdd" class="btn" title="Add " ><div class="fa fa-plus"></div> Add</a>
+                    <a  data-id="btnEdit" class="btn" title="Edit " > <div class="fa fa-edit"></div> Edit</a>
+                    <a  data-id="btnDelete" class="btn" title="Remove " > <div class="fa fa-minus"></div> Remove</a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <h5 data-id="lis-header">Listing</h5>
+                <table  class="table" data-id="table">
+                    <thead data-id="thead">
+                    <tr>
+                        <td>Name</td><td>email</td><td>username</td>
+                    </tr>
+
+                    </thead>
+                    <tbody data-id="tbody">
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <section data-id="AddItem" class="modal">
+            <div class="modal-dialog">
+                <form class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-id="btnClose">&times;</button>
+                        <h4 class="modal-title" data-id="title">Administrator</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form">
+                            <div class="form-group">
+                                <label>Name:</label>
+                                <input  type="text"  name="name" class="form-control"  />
+                            </div>
+                            <div class="form-group">
+                                <label>Email:</label> <small>(Required to restore password}</small>
+                                <input  type="email" name="email"     class="form-control"  />
+                            </div>
+                            <div class="form-group">
+                                <label>Username:</label>
+                                <input  type="text"  placeholder="username is reqired" name="username"  class="form-control"  />
+                            </div>
+                            <div class="form-group">
+                                <label>Password:</label>
+                                <input  type="password"  placeholder="password is reqired" name="password"  class="form-control"  />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div data-id="message" class="hidden">
+
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-default" data-id="btnClose">Close</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+     <!--   <section data-ctr="EditItem">
+            <form class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-id="btnClose">&times;</button>
+                    <h4 class="modal-title">Add Administrator</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form">
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input  type="text"  class="form-control"  />
+                        </div>
+                        <div class="form-group">
+                            <label>Email:</label> <small>(Required to restore password}</small>
+                            <input  type="email"     class="form-control"  />
+                        </div>
+                        <div class="form-group">
+                            <label>Username:</label>
+                            <input  type="text"  placeholder="username is reqired"  class="form-control"  />
+                        </div>
+                        <div class="form-group">
+                            <label>Password:</label>
+                            <input  type="password"  placeholder="password is reqired"  class="form-control"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-default" data-id="btnClose">Close</button>
+                </div>
+            </form>
+
+        </section>-->
+        <section data-id="DeleteItem" class="modal">
+            <div class="modal-dialog">
+                <form class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-id="btnClose">&times;</button>
+                        <h4 class="modal-title">Delete Administrator</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Click Submit to delete record with name:</label>
+                            <input  type="text"  name="name" readonly  class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div data-id="message" class="hidden">
+
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-default" data-id="btnClose">Close</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+</div>
+</section>

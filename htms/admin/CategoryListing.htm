@@ -1,0 +1,153 @@
+<section class="container">
+<style type="text/css">
+
+.header>div{
+    display: inline-block;;
+}
+     li.item{
+         cursor: pointer;
+         margin: 0.5em;
+     }
+     .item>.name{
+         width: 20em;
+
+     }
+     .header .name{
+         text-align: center;
+     }
+
+ .item>.id{
+        width: 2em;
+ }
+     .item.seq{
+         width: 2em;
+     }
+
+     .list>.fa{
+         margin: 1em;
+     }
+     .item .icon{
+         display: inline-block;
+         width: 1em;
+     }
+     .preview .fa{
+         font-size: 3em;
+         background: white;
+
+     }
+     #CategoryForm [data-id=icon]{
+         font-size: 1.5em;
+     }
+     #CategoryNotListing input{
+         width: 5em;
+         padding-left: 1.5em;
+         margin-left: -1.5em;
+     }
+
+     #CategoryListing h5{
+         font-size: 120%;
+         font-weight: bold;
+         margin: 1em;
+     }
+     #CategoryListing .list{
+         height: 50em;
+         overflow-y: auto;
+     }
+
+#CategoryList .item{
+    margin: 1em;
+}
+.small{
+    font-weight: 100;
+    font-size: 0.7em;
+    float: right;
+}
+     #CategoryNotListing .fa-times-circle{
+         margin-left: -2em;
+     }
+</style>
+
+
+    <div class="page-heading">
+        <h4>Assign records to category</h4>
+        <div class="pagenav" data-ctr="BreadCrumbs">
+
+        </div>
+    </div>
+    <section class="row">
+
+        <section id="CategoryListing" >
+
+            <section id="CategoryList" class="col-sm-6">
+                <div class="panel panel-default">
+                    <section class="panel-heading">
+                        <div class="fa fa-server"></div>
+                    </section>
+                    <h5>List of Categories</h5>
+                    <div class=list-container" >
+                        <div data-id="header" class="header item"></div>
+                        <div data-id="list" class="list">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="CategoryInListing" class="col-sm-6">
+                <div class="panel panel-default">
+                <section class="panel-heading">
+                    <a  data-id="btnAdd" class="btn" title="Add records to category" ><div class="fa fa-plus"></div> Add</a>
+                    <a  data-id="btnDel" class="btn" title="Remove selected from Category" > <div class="fa fa-minus"></div> Remove</a>
+                    <a  data-id="btnReset" class="btn" title="Remove selected from Category" > <div class="fa fa-bolt"></div> Reset</a>
+                  <!--  <a  data-id="btnSave" class="btn" title="Save changes on server" > <div class="fa fa-save"></div> Save</a>-->
+                </section>
+                            <h5 ><span data-id="title">In Cayegory: </span> <div class="small">Total:<span data-id="total" ></span></div></h5>
+                            <div  data-id="list" class="list">
+
+                            </div>
+                </div>
+
+                <div class="form-group col-sm-4">
+                </div>
+                <div class="form-group col-sm-4">
+                    <button type="button" class="btn btn-primary form-control"  data-id="btnSave" >Save</button>
+                </div>
+                <div class="form-group col-sm-4">
+                </div>
+            </section>
+
+
+
+
+
+
+            <section id="CategoryNotListing" class="col-sm-6">
+                <div class="panel panel-default">
+
+                                <div class="panel-heading">
+                                    <a  data-id="btnBack" class="btn" title="Back to category selector" ><div class="fa fa-backward"></div> Back</a>
+                                    <a  data-id="btnAdd" class="btn" title="Add selected records to category" ><div class="fa fa-plus"></div>Add Selected</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; <a><div class="fa fa-search"></div> <input data-id="tiSearch" type="text" /><div class="btn fa fa-times-circle"></div></a>
+                                    <a class="btn fa fa-close  pull-right" data-id="btnClose"></a>
+                                 </div>
+                                <h5>Not in Category  <div class="small">Total:<span data-id="total" ></span></div></h5>
+                                <div data-id="list" class="list">
+
+                                </div>
+                </div>
+            </section>
+
+        </section>
+       
+    </section>
+
+
+</section>
+<!-- end manage categories -->    
+       		
+         <!--  <script type="text/javascript" src="js/lists/DestinationsList.js"></script>   -->
+           
+          <!-- <script type="text/javascript" src="js/lists/ManageCategoriesListing.js"></script>-->
+
+       <!-- ////////////////////////////////// -->

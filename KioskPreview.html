@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Kiosk Preview</title>
+    <script src="js/libs/jquery-2.1.0.min.js"></script>
+    <link href="js/lists/reset.css" rel="stylesheet" type="text/css"/>
+    <style>
+        #kioskIframe {
+            -ms-zoom: 0.5;
+            -moz-transform: scale(0.5);
+            -moz-transform-origin: 0 0;
+            -o-transform: scale(0.5);
+            -o-transform-origin: 0 0;
+            -webkit-transform: scale(0.5);
+            -webkit-transform-origin: 0 0;
+            width: 1080px;
+            height: 1920px;
+        }
+        #Container{
+            width: 540px;
+            height: 960px;
+            overflow: hidden;
+            margin: auto;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            var getParams = function(){
+                var ind = window.location.href.indexOf('?');
+                if(ind===-1) return null;
+                var str =  window.location.href.substr(ind+1);
+                var ar = str.split('&');
+               var obj ={};
+                for(var i=0,n=ar.length;i<n;i++){
+                    var item = ar[i].split('=');
+                    if(item.length==2) obj[item[0]] = item[1];
+                }
+                return obj;
+            }
+            var params= getParams();
+            console.log(params);
+            var scale=0.5;
+            if(params['scale']) scale = Number(params['scale']);
+            if(isNaN(scale)) scale= 0.5;
+            var width = 1080;
+            var height = 1920;
+            if(params['resolution']){
+                var res = params['resolution'].split('x').map(Number);
+                if(!isNaN(res[0]) && !isNaN(res[1]) ){
+                    width= res[0];
+                    height = res[1];
+                }
+
+            }
+
+
+
+
+
+            $('#kioskIframe').css('transform','scale('+(scale)+')');
+            $('#kioskIframe').width(width);
+            $('#kioskIframe').height(height);
+            $('#Container').width(width*scale);
+            $('#Container').height(height*scale);
+            $('#kioskIframe').attr('src',window.location.hash.substr(1));
+        })
+    </script>
+</head>
+<body>
+<div id="Container">
+    <iframe id="kioskIframe">
+
+    </iframe>
+</div>
+
+</body>
+</html>

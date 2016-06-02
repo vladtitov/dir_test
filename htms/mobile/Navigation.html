@@ -1,0 +1,61 @@
+<!--Main Navigation -->
+
+<section id="Static" class="fixed">
+    <section id="Navigation" data-ctr="Menu">
+        <style>
+            .fixed{
+                position: fixed;
+                right: 0;
+                top: 0;
+            }
+
+            #Navigation{
+                border-radius: 10px;
+            }
+            #Navigation #buttonMenu{
+                font-size: 1.5em;
+                width: 2em;
+                height: 2em;
+                margin: 0.5em 1em;
+                padding: 0.5em;
+                background-color:black;
+                color: white;
+                border-radius: 10%;
+
+            }
+            #Navigation nav>a{
+                display: block;
+            }
+            #Navigation .content{
+                background-color: white;
+                padding: 1em;
+            }
+
+        </style>
+        <div id="buttonMenu" class="pull-right">
+            <div  data-id="btnMenu"><span class="fa fa-bars">&nbsp;</span></div>
+        </div>
+
+        <div class="content" data-id="content">
+            <div>
+                <nav>
+                    <a href="#SearchDirectories">Search Directories</a>
+                </nav>
+            </div>
+            <div>
+                <h5>Info Pages</h5>
+                <nav data-id="listP">
+
+                </nav>
+            </div>
+
+            <div>
+                <h5>Listing Categories</h5>
+                <nav data-id="listC">
+
+                </nav>
+            </div>
+        </div>
+
+    </section>
+</section>

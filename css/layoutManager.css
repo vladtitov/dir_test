@@ -1,0 +1,30 @@
+﻿#layoutManager{
+width:100%;
+}
+
+.innerContent div{
+	float:left;
+	padding:10px;
+}
+#imageLibrary img{
+   width:120px;
+   height:80px;
+   padding:2px;
+   margin:3px;
+}
+img.selected{
+   border:1px #666 solid;
+}
+#imageLibraryHolder{
+    width:150px;
+}
+#imageLibrary{
+    overflow-x:hidden;
+    overflow-y:scroll;
+    width:150px;
+	height:545px;
+   border-radius: 5px;
+   margin:10px;
+	
+   
+}

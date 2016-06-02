@@ -1,0 +1,64 @@
+ <!----- Start Of Background manager ------------>
+<style type="text/css">
+#imageLibraryHolder img{
+   width:120px;
+   height:80px;  
+}
+img .selected{
+	background-color:#FFC;
+}
+#bgPreviw{
+	border:1px #999 solid;
+	box-shadow: 5px 5px 5px #888888;
+}
+#bgEditor form{
+	display:inline;
+}
+.tools form{
+	background-color:#FFF;
+	position:absolute;
+	padding:10px;
+	border-radius:5px;
+	border:thin #CCC solid;
+}
+.current{
+	border:thin #F00 solid;
+}
+</style>
+<div id="BackgroundManager" class="page">
+	<div class="view" >
+        <div class="tools" data-id="menu1">
+          <a href="javascript:void(0)" class="uplight" title="Import a new image into library" data-id="btnAdd" > <img  src="css/icons/plus.png" />Add </a>
+          <!-- <img data-id="btnEdit" src="css/icons/edit.png" title="Edit selected category"  />Edit &nbsp;&nbsp;-->
+           <a href="javascript:void(0)" class="uplight"  data-id="btnDel" title="Delete image from  library" > <img src="css/icons/minus.png" />Delete </a>
+               <!-- <img data-id="btnDel" src="css/icons/save.png" title="Save Changes on Server" />Save &nbsp;&nbsp;   -->
+         <!--<button data-id="Edit" style="width:100%;">Manage Library</button>        -->
+        </div>
+        
+        <h5>Background Library</h5>          
+        <ul id="imageLibraryHolder" class="uplight" style=" width:160px; height:515px;"></ul>                        
+                   
+    </div>
+ 
+        <div id="bgEditor" class="view" style="width:970px;">
+            <div class="tools">
+            <a href="javascript:void(0)" class="uplight"  data-id="btnCurrent" title="Show current Background" > <img src="css/icons/preview_b.png"  />Show current Background</a>  
+              <!--  <button  data-id="current">Show current Background</button>-->
+                 <a href="javascript:void(0)" class="uplight"  data-id="btnSave" title="Set Current Image as Background"> <img src="css/icons/save.png"  />Set Current Image as Background</a>  
+                 
+                    
+               <!-- <button  data-id="save" >Set Current Image as Background</button>  -->              
+            </div>
+            
+            <h5>Background Manager</h5>  
+            <img  id="bgPreviw" data-id="imgPreviw" width="960"  height="540" />                                   
+       </div>     
+<!--<form id="formImageUpload" enctype="multipart/form-data"  >                      
+                                <input data-id="myFile" name="file" type="file" title="Choose file on local filesystem" />
+                                <input data-id="btnUpload" type="button" value="Upload" title="Upload image on server" />
+                                  <progress ></progress>
+  </form>-->
+</div>
+ <script type="text/javascript" src="js/admin/BackgroundManager.js"></script>
+ 
+ <!------------------End of Background Manager ----->

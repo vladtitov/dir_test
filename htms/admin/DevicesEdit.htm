@@ -1,0 +1,65 @@
+<div id="KiosksEdit" class="row">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a class="btn" data-id="btnRestart"><div class="fa fa-refresh"></div> <span> Restart</span></a>
+            <a class="btn" data-id="btnDelete"><div class="fa fa-minus"></div> <span> Delete</span></a>
+            <a class="btn" data-id="btnCreate"><div class="fa fa-plus"></div> <span> Create</span></a>
+            <a class="btn" data-id="btnEdit"><div class="fa fa-edit"></div> <span> Edit</span></a>
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <thead><tr>
+                    <th class="btn" data-id="btnAll">All</th>
+                    <th>Name</th>
+                    <th>Link</th>
+                    <th>Status</th>
+                    <th>Icon</th>
+                    <th>IP</th>
+                    <th>Ping</th>
+                    <th class="text-center">Started At</th>
+                    <th class="text-center">Last ping at</th>
+                </tr>
+                </thead>
+                <tbody data-id="list">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="modal" id="kioskEditPanel" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-id="btnClose">&times;</button>
+                    <h4 class="modal-title" data-id="editHeader">Header</h4>
+                </div>
+                <div class="modal-body">
+                    <div  role="form" >
+                        <div class="form-group">
+                            <label>Template:</label>
+                            <select class="form-control"  data-id="selTemplate" ></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input  type="text"  placeholder="name is reqired"  class="form-control"  data-id="tiName" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group col-sm-4">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <button type="button" class="btn btn-primary form-control"  data-id="btnSave">Save</button>
+                    </div>
+
+                        <button type="button" class="btn btn-default" data-id="btnClose">Close</button>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

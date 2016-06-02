@@ -1,0 +1,28 @@
+#Keyboard{
+    display: inline-block;
+}
+#Keyboard .kb-key{
+    display: inline-block;
+    width:38px;
+    height: 38px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #999999;
+    margin: 4px;
+    line-height: 24px;
+    /*  display: table-cell;*/
+
+}
+#Keyboard .row2{
+    padding-left: 15px;
+
+}
+#Keyboard .kb-key.space{
+    width: 100px;
+
+}
+#Keyboard .kb-key.back{
+    width: 50px;
+    font-size: 150%;
+
+
+}

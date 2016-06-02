@@ -1,0 +1,126 @@
+ <style type="text/css">
+     #CategoriesList-list{
+         height: 20em;
+         overflow: auto;
+     }
+
+     #CategoriesList .item{
+         cursor: pointer;
+     }
+
+     .icons-lib>.list>.fa{
+         margin: 1em;
+     }
+
+     #CategoryForm .form .c-icon{
+         font-size: 1.5em;
+     }
+     #CategoryForm>.form .abs.preview{
+         font-size: 3em;
+         background: white;
+     }
+</style>
+ 
+<section class="container">
+
+    <section id="CategoriesManager" class="row">
+        <div class="page-heading">
+            <h4>Categories Manager</h4>
+            <div class="pagenav" data-ctr="BreadCrumbs">
+
+            </div>
+        </div>
+
+        <section id="CategoriesView" class="panel panel-default">
+                <div class="panel-heading">
+                       <div id="addremove">
+                           <a  data-id="btnAdd" class="btn" title="Create new Category" ><div class="fa fa-plus"></div> Add</a>
+                           <a  data-id="btnEdit" class="btn" title="Edit selected Category" > <div class="fa fa-edit"></div>Edit</a>
+                           <a  data-id="btnDel" class="btn" title="Delete selected Category" > <div class="fa fa-minus"></div> Delete</a>
+                          <!-- <a  data-id="btnSave" href="javascript:void(0)" class="uplight" title="Save Category" > <img src="css/icons/save.png" />Save</a>    -->
+                        </div>
+
+                </div>
+
+                <div id="CategoriesList" class="panel-body">
+                       <h5>Categories in Menu list</h5>
+                         <table  class="table">
+
+                         </table>
+
+                </div>
+            </section>
+
+
+    </section>
+    <section class="row">
+        <section id="CategoryForm" class="panel panel-default">
+            <div class="panel-heading">
+                <div class="btn fa fa-close pull-right" data-id="btnClose"></div>
+                <h1 class="panel-title">Category Editor</h1>
+
+            </div>
+            <br/>
+            <section class="panel-body form">
+
+                <div class="form-group col-sm-1">
+                    <label>Icon</label> <!--<label class="btn"> <div class="fa fa-edit"> </div>Edit</label>-->
+                    <div  class="form-control">
+                        <div title="Click on Icon in Library to change" class="fa fa-plus c-icon" data-id="icon"> </div>
+                    </div>
+                </div>
+                <div class="form-group col-sm-8">
+                    <label>Name:</label>
+                    <input  type="text"  placeholder="name is reqired"  class="form-control"  data-id="tiName" />
+                </div>
+
+                <div class="form-group col-sm-2">
+                    <label>Sequence</label>
+                    <select  class="form-control"  data-id="selectSeq" ></select>
+                </div>
+                <div class="form-group col-sm-1">
+                    <label>Enable</label>
+                    <input  type="checkbox"   class="form-control" data-id="chkEnable" />
+                </div>
+
+
+
+                <div class="col-md-12">
+                    <hr/>
+                </div>
+                <div class="btn col-sm-2" data-id="btnEditIcon" title="Open/Close icons Library">
+                    <span class="fa fa-edit"> </span>
+                    <span>Change Icon</span>
+                </div>
+                <div class="form-group col-sm-2">
+                </div>
+                <div class="form-group col-sm-4">
+                    <button type="button" class="btn btn-primary form-control"  data-id="save">Save</button>
+                </div>
+                <div class="form-group col-sm-4">
+                    <button class="btn btn-default pull-right" data-id="btnClose">Close</button>
+                </div>
+
+
+                <div class="form-group col-sm-12">
+                    <label >Icons Library</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-default" data-id="btnBlankIcon">Remove Icon</button>
+                    <div class="panel-body icons-lib" data-id="iconsLibrary">
+                        <div class="list">
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+        </section>
+    </section>
+</section>
+<!-- end manage categories -->    
+       		
+         <!--  <script type="text/javascript" src="js/lists/DestinationsList.js"></script>   -->
+           
+          <!-- <script type="text/javascript" src="js/lists/ManageCategoriesListing.js"></script>-->
+
+       <!-- ////////////////////////////////// -->
