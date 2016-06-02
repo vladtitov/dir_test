@@ -14,6 +14,9 @@ include('KioskHeader.php');
         <?= isset($labels['bg_1080'])?'background-image:url("'.$labels['bg_1080'].'");':'' ?>
     }
 
+	
+	
+	
 
 </style>
 </head>
